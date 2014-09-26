@@ -1,0 +1,30 @@
+> listclients
+client3
+client2
+client1
+
+> infoclient client1
+client1 127.0.0.1 6000 03:51:25 PM
+
+> infoclient client2
+client2 127.0.0.1 6002 03:51:12 PM
+
+> sharefile Readme.txt
+Succes
+
+> sharefile tema.c
+Succes
+
+> getshare client1
+Readme.txt 1KB
+
+> getshare client2
+Readme.txt 1KB
+tema.c 401B
+
+> getshare client3
+-2 : Fisiere inexistente
+
+> getshare dgdfv
+-2 : Fisiere inexistente
+

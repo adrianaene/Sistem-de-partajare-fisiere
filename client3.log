@@ -1,0 +1,29 @@
+> getshare clien2
+-2 : Fisiere inexistente
+
+> getshare client2
+Readme.txt 1KB
+tema.c 401B
+
+> sharefile tema.c
+Succes
+
+> unsharefile enunt.pdf
+-2 : Fisier inexistent
+
+> unsharefile tema.c
+Succes
+
+> getshare client3
+-2 : Fisiere inexistente
+
+> infofile enunt.pdf
+-2 : Fisier inexistent
+
+> infofile Readme.txt
+client2 Readme.txt 1KB
+client1 Readme.txt 1KB
+
+> infofile tema.c
+client2 tema.c 401B
+

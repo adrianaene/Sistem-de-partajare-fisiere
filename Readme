@@ -1,0 +1,79 @@
+Ene Adriana
+321CC
+
+	Am urmarit scheletul de cod al laboratorului 8.
+
+	In Client folosesc urmatoarele comenzi:
+		
+		-ma conectez la server;
+
+		-daca primesc accept din partea serverului trimit un mesaj de forma 
+		"client nume nume_folder port" pentru ca serverul sa poata cunoaste 
+		informatii legate de client;
+
+		-apoi clientul intr-o in faza de asteptare in care sunt 
+		2 cazuri :
+			-citesc o comanda de la tastatura.(functia prelucrare_comanda);
+			-primesc date de la server.(deconectarea clientului).
+	
+	Comenzile primite de la tastatura sunt :
+		
+		-listclients: trimite serverului mesajul "listclients",iar acesta trimite
+		lista de clienti;
+		
+		-infoclient: trimite serverului mesajul "infoclient nume_client",
+		iar serverul ii trimite detaliile legate de un client;
+
+		-getshare: trimite serverului mesajul "getshare nume_client",
+		iar serverul ii trimite detaliile legate de un client care partajeaza fisiere;
+
+		-infofile: trimite serverului mesajul "infofile nume_fisier",
+		iar serverul ii trimite detaliile legate de un fisier;
+
+		-sharefile: trimite serverului mesajul "sharefile nume_fisier dimensiune_fisier",
+		si afisez informatii despre share-uirea fisierului si serverului ii trimit
+		informatii daca exista fisierul;
+		
+		-unsharefile: trimite serverului mesajul "unsharefile nume_fisier dimensiune_fisier",
+		si afisez informatii despre unshare-uirea fisierului  si serverul ii trimit
+		informatii daca exista fisierul;
+
+		-quit: inchid clientul.
+
+	In server:
+	
+		-in functia principala exista 3 cazuri:
+
+		-citesc o comanda de la tastatura(functia prelucrare_comanda);
+
+		-creez o noua conexiune cu unul din clienti;
+
+		-primesc o comanda de la un client(functia prelucrare_mesaj).
+
+        Functia prelucrare_mesaj:
+		
+		-client: creeaza un client(il adaug la vectorul de clienti);
+		
+		-listclients: trimit lista de nume de clienti clientului;
+
+		-infoclient: trimit informatiile despre un client sau cod de eroare
+		clientului;
+	
+		-getshare: trimit lista de fisiere partajate sau cod de eroare;
+		
+		-infofile: trimit lista de inforamtii despre fisier sau cod de eroare;
+
+		-sharefile: adaug dimensiunea si numele fisierului in lista;
+
+		-unsharefile: adaug dimensiunea si numele fisierului in lista. 
+
+	Funtia prelucrare_comanda:
+		
+		-pentru status: afisez la consola detalii despre fiecare client;
+
+		-pentru quit: inchid serverul si deconectez clientilor.
+
+	In arhiva am trimis si 3 fisiere <nume_client>.log pentru a se observa 
+	functionalitatea programului.
+
+		

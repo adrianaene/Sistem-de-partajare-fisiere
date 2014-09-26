@@ -1,0 +1,28 @@
+> listclients
+client3
+client2
+client1
+
+> infoclient client3
+client3 127.0.0.1 6001 03:51:02 PM
+
+> sharefile Readme.txt
+Succes
+
+> sharefile enunt.pdf
+-2 : Fisier inexistent
+
+> infofile Readme.txt
+client2 Readme.txt 1KB
+client1 Readme.txt 1KB
+
+> unsharefile Readme.txt
+Succes
+
+> infofile Readme.txt
+client2 Readme.txt 1KB
+
+> getshare client2
+Readme.txt 1KB
+tema.c 401B
+
